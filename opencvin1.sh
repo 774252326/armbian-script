@@ -1,19 +1,19 @@
-git clone https://github.com/opencv/opencv.git
-git clone https://github.com/opencv/opencv_contrib.git
+#git clone https://github.com/opencv/opencv.git
+#git clone https://github.com/opencv/opencv_contrib.git
 
-cd opencv
+mkdir ubuntua
+
 mkdir build
 cd build
 
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_QT=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules ..
-#sudo cmake-gui
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D BUILD_SHARED_LIBS=OFF -D CMAKE_INSTALL_PREFIX=../ubuntua -D WITH_QT=ON -D OPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules ../opencv
+#cmake-gui
 make clean
 make 
-sudo make install 
-sudo ldconfig
+make install 
 
 cd ..
-cd ..
-sudo rm -rf opencv
-sudo rm -rf opencv_contrib
+rm -rf build
+#rm -rf opencv
+#rm -rf opencv_contrib
 
