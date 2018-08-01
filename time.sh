@@ -8,7 +8,7 @@ sudo htpdate -t -s www.baidu.com www.google.com
 cd ..
 sudo rm -rf htpdate
 
-sudo dpkg-reconfigure tzdata
+#sudo dpkg-reconfigure tzdata
 
 # set run on boot
 # sudo leafpad /etc/rc.local
